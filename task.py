@@ -29,7 +29,12 @@ pass
 
 def correlazione_matrici(m1: list, m2: list) -> np.ndarray:
     """Sub-task 4: Correlazione tra Matrici 2x2."""
-    pass
+
+    v1 = np.array(m1).flatten()
+    v2 = np.array(m2).flatten()
+    return np.array([[np.corrcoef(v1, v2)[0, 1]]])
+
+pass
 
 def operazioni_elemento_per_elemento(v1: list) -> tuple:
     """Sub-task 5: Restituisce (seno, coseno, arcoseno, arcocoseno) elemento per elemento calcolati sul primo array."""
