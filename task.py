@@ -18,7 +18,14 @@ pass
 
 def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:
     """Sub-task 3: Risolvere un Sistema Lineare."""
-    pass
+    A_np = np.array(A, dtype=float)
+    b_np = np.array(b, dtype=float)
+
+    try:
+       return np.linalg.solve(A_np, b_np)
+    except np.linalg.LinAlgError:
+        raise ValueError("Il sistema non ha soluzione unica (matrice singolare)")
+pass
 
 def correlazione_matrici(m1: list, m2: list) -> np.ndarray:
     """Sub-task 4: Correlazione tra Matrici 2x2."""
